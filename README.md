@@ -1,4 +1,4 @@
-# Quick demonstrations for sample size planning with pwr and simr
+# Quick demonstrations for sample size planning with `pwr` and `simr`
 
 This repository contains the R scripts and data used in a CLARIN-CH & LiRI workshop on statistical power analysis.
 
