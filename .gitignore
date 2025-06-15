@@ -1,0 +1,50 @@
+# History files
+.Rhistory
+.Rapp.history
+
+# Session data files
+.RData
+.Ruserdata
+
+# RStudio files
+.Rproj.user/
+*.Rproj
+
+# R package build artifacts
+.Rcheck/
+.Rbuildignore
+
+# Cache folders
+__pycache__/
+.Rcache/
+.cache/
+.Rtmp*/
+
+# Data or large files (optional)
+*.csv
+*.tsv
+*.rds
+*.RData
+*.sav
+*.dta
+
+# Mac-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# VSCode settings (if applicable)
+.vscode/
+
+# Other system or temp files
+*.swp
+*~
+*.bak
+*.tmp
+*.log
+
+# macOS system files
+.DS_Store
+._*
