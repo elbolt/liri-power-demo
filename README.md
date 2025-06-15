@@ -1,6 +1,6 @@
-# liri-power-demo
+# Quick demonstrations for sample size planning with pwr and simr
 
-This repository contains the R scripts and data used in the CLARIN-CH & LiRI workshop on statistical power analysis.
+This repository contains the R scripts and data used in a CLARIN-CH & LiRI workshop on statistical power analysis.
 
 We demonstrate two common approaches to planning sample size:
 
@@ -11,9 +11,9 @@ We demonstrate two common approaches to planning sample size:
 
 ## Contents
 
-| File                          | Description                                       |
-|-------------------------------|---------------------------------------------------|
-| `ANOVA_pwr_tutorial.R`        | Analytic example using the `pwr` package         |
-| `LMM_simr_tutorial.R`         | Simulation example using the `simr` package      |
-| `slides.pdf`                  | Yet to upload                                       |
-
+| File                          | Description                                               |
+|-------------------------------|-----------------------------------------------------------|
+| `ANOVA_pwr_tutorial.R`        | Analytic example using the `pwr` package                  |
+| `LMM_simr_tutorial.R`         | Simulation example using the `simr` package               |
+| `LMM_simr_results.RData`      | Precomputed simulation results to avoid waiting time      |
+| `slides.pdf`                  | Yet to upload                                             |

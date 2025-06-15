@@ -48,3 +48,6 @@ Icon?
 # macOS system files
 .DS_Store
 ._*
+
+# Cusotm
+!LMM_simr_results.RData
