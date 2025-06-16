@@ -42,6 +42,10 @@ design <- data.frame(
   condition = condition
 )
 
+# RT (which we will eventually measure)
+design$rt_ms <- NA
+View(design)
+
 # Simulate RTs (ms): nonword = 600, lowfreq = 585, highfreq = 570
 # For illustrative purposes only, not necessary for power analysis
 design <- design |>
@@ -52,6 +56,7 @@ design <- design |>
       condition == "highfreq" ~ rnorm(n(), mean = 570, sd = 80)
     )
   )
+View(design)
 
 # --------------------------------------
 # Step 3: Aggregate RTs to participant x condition level
@@ -60,7 +65,7 @@ design <- design |>
 agg_data <- design |>
   group_by(participant_id, condition) |>
   summarise(rt_ms = mean(rt_ms), .groups = "drop")
-head(agg_data)
+View(agg_data)
 
 # --------------------------------------
 # Step 4: Model for illustration
@@ -78,6 +83,12 @@ power_result <- pwr.f2.test(
   sig.level = 0.05,
   power = 0.80
 )
+
+# Compute required sample size from power result
+# - u: numerator df (number of predictors tested, e.g., 2 contrasts)
+# - v: denominator df (residual degrees of freedom)
+# Total sample size N is reconstructed as: N = u + v + 1
+# We use ceiling() to round up to the next whole number
 n_required <- ceiling(power_result$u + power_result$v + 1)
 
 print(power_result)

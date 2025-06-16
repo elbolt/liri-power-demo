@@ -11,6 +11,7 @@ setwd(dirname(getActiveDocumentContext()$path))
 
 # --------------------------------------
 # Step 1: Create design
+# Identical with `ANOVA_pwr_tutorial.R`
 # --------------------------------------
 
 n_participants <- 30
@@ -37,12 +38,22 @@ design <- data.frame(
   item_id = item_id,
   condition = condition
 )
+View(design)
 
 # --------------------------------------
 # Step 2: Model parameters
 # --------------------------------------
 
-fixef_vals <- c(600, -10, -20)  # Pseudoword baseline: 600 ms
+# Fixed effects (slide 38):
+# — nonword = 600 (baseline, from Mustermann et al.)
+# — lowfreq = 590 (−10 ms, middleground guess)
+# — highfreq = 580 (−20 ms, from Mustermann et al.)
+fixef_vals <- c(600, -10, -20)
+
+# Random effects (slide 39):
+# — Participant: SD = 30 ms
+# — Item: SD = 30 ms
+# — Residuals: SD = 80 ms
 rand_intercepts <- list(
   participant_id = 30^2,
   item_id = 30^2
@@ -101,10 +112,4 @@ print(curve_i)
 # n_participants <- 60
 # n_items_per_condition <- 60
 # --------------------------------------
-  
-  
- # --------------------------------------
-# Save session
-# --------------------------------------
-
 save.image("LMM_simr_results.RData")

@@ -4,8 +4,10 @@ This repository contains the R scripts and data used in a CLARIN-CH & LiRI works
 
 We demonstrate two common approaches to planning sample size:
 
-- An **analytic** power analysis using `pwr` (for a repeated-measures ANOVA)
-- A **simulation-based** power analysis using `simr` (for a linear mixed-effects model)
+- An **analytic** power analysis using `pwr` (for a repeated-measures ANOVA),
+- A **simulation-based** power analysis using `simr` (for a linear mixed-effects model),
+
+which are based on an fictional study example.
 
 ---
 
